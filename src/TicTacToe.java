@@ -47,6 +47,8 @@ public class TicTacToe  implements ActionListener {
     frame.add(title_panel,BorderLayout.NORTH);
     frame.add(button_panel);
 
+    firstTurn();
+
   }
   public void actionPerformed(ActionEvent e) {
 
@@ -54,6 +56,18 @@ public class TicTacToe  implements ActionListener {
   //determine which player will go first
   public void firstTurn(){
 
+    try{
+      Thread.sleep(2000);
+    } catch (InterruptedException e){
+      e.printStackTrace();
+    }
+    if(random.nextInt(2)==0){
+      player1_turn = true;
+      textField.setText("X turn");
+    } else{
+      player1_turn = false;
+      textField.setText("O turn");
+    }
   }
   // check to see if the player has worn
   public void check(){
