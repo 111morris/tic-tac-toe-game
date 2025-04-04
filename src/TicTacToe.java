@@ -91,7 +91,67 @@ public class TicTacToe  implements ActionListener {
   }
   // check to see if the player has worn
   public void check(){
+    //checking rows X
+    if(
+        //checking the first row
+        (buttons[0].getText() == "X")&&
+        (buttons[1].getText() == "X")&&
+        (buttons[2].getText() == "X")){
+      xWins(0,1,2);
+    }
+    if(
+      //checking the second row
+        (buttons[3].getText() == "X")&&
+            (buttons[4].getText() == "X")&&
+            (buttons[5].getText() == "X")){
+      xWins(3,4,5);
+    }
+    if(
+      //checking the third row
+        (buttons[6].getText() == "X")&&
+            (buttons[7].getText() == "X")&&
+            (buttons[8].getText() == "X")){
+      xWins(6,7,8);
+    }
 
+    //checking columns X
+    if(
+      //checking the first column
+        (buttons[0].getText() == "X")&&
+            (buttons[3].getText() == "X")&&
+            (buttons[6].getText() == "X")){
+      xWins(0,3,6);
+    }
+    if(
+      //checking the second column
+        (buttons[1].getText() == "X")&&
+            (buttons[4].getText() == "X")&&
+            (buttons[7].getText() == "X")){
+      xWins(1,4,7);
+    }
+    if(
+      //checking the third column
+        (buttons[2].getText() == "X")&&
+            (buttons[5].getText() == "X")&&
+            (buttons[8].getText() == "X")){
+      xWins(2,5,8);
+    }
+
+    //checking the diagonals
+    if(
+      //checking the first diagonal
+        (buttons[0].getText() == "X")&&
+            (buttons[4].getText() == "X")&&
+            (buttons[8].getText() == "X")){
+      xWins(0,4,8);
+    }
+    if(
+      //checking the second diagonal
+        (buttons[2].getText() == "X")&&
+            (buttons[4].getText() == "X")&&
+            (buttons[6].getText() == "X")){
+      xWins(2,4,6);
+    }
   }
   public void xWins(int a, int b, int c){
 
